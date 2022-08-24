@@ -40,11 +40,27 @@ public class HomeFragment extends Fragment {
         //final TextView textView = binding.textHome;
         //homeViewModel.getText().observe(getViewLifecycleOwner(), text_home::setText);
 
-        homeViewModel.getText().observe(getActivity(), new Observer<String>() {
+        /*homeViewModel.getText().observe(getActivity(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 Toast.makeText(getContext(), s, Toast.LENGTH_SHORT).show();
                 text_home.setText(s);
+            }
+        });*/
+
+        homeViewModel.starCount();
+
+        homeViewModel.getstrt().observe(getActivity(), new Observer<Long>() {
+            @Override
+            public void onChanged(@Nullable Long abc) {
+                text_home.setText(abc.toString());
+            }
+        });
+
+        homeViewModel.getfinish().observe(getActivity(), new Observer<Boolean>() {
+            @Override
+            public void onChanged(@Nullable Boolean aBoolean) {
+                text_home.setText("finish");
             }
         });
 
