@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
 
         text_home = root.findViewById(R.id.text_home);
 
-        ((AppCompatActivity) getContext()).getSupportActionBar().setTitle("Home");
+        //((AppCompatActivity) getContext()).getSupportActionBar().setTitle("Home");
 
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory())

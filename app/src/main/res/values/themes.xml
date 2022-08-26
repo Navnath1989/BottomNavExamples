@@ -5,6 +5,26 @@
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
+
+
         <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
     </style>
+
+    <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+       <!-- <item name="android:titleTextStyle">@style/MyTitleTextStyle</item>-->
+        <item name="android:background">@color/purple_500</item>
+
+        <!-- Support library compatibility -->
+        <!--<item name="titleTextStyle">@style/TitleTextStyle</item>-->
+        <item name="background">@color/purple_500</item>
+    </style>
+
 </resources>

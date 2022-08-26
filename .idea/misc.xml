@@ -4,12 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.196" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/drawable/eidittext_background.xml" value="0.2095" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/drawable/home_navigation_selector.xml" value="0.2105" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2105" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1945" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/activity_login.xml" value="0.19972826086956522" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/app_bar_main.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/drow_layout.xml" value="0.19972826086956522" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/fragment_dashboard.xml" value="0.17074275362318841" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/fragment_notifications.xml" value="0.17074275362318841" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/framelayout_activity.xml" value="0.17074275362318841" />
+        <entry key="..\:/Android/BottomNavExamples/app/src/main/res/layout/nav_header_main.xml" value="0.19972826086956522" />
         <entry key="..\:/Android/BottomNavExamples/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>

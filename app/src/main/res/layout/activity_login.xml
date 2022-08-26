@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Welcome to ODS"
+                android:textColor="#263DC1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edEmail"
+                android:hint="Enter Email Id"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:background="@drawable/eidittext_background"
+                android:textColorHint="#cccccc"
+                android:layout_marginTop="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"/>
+
+            <EditText
+                android:id="@+id/edPassw"
+                android:layout_marginTop="16dp"
+                android:textColorHint="#cccccc"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:background="@drawable/eidittext_background"
+                android:hint="Enter Password"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="Login"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:background="@color/purple_500"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

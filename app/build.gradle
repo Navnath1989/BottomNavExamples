@@ -27,16 +27,21 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
+
+   /* dataBinding {
+        enabled = true
+    }*/
 }
 
 dependencies {
 
     implementation 'com.android.support:appcompat-v7:+'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'android.arch.lifecycle:livedata:1.1.0'
     implementation "android.arch.lifecycle:extensions:1.1.0"
-    implementation 'android.arch.lifecycle:livedata:1.1.1'
-    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation "android.arch.lifecycle:viewmodel:1.1.0"
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'
     implementation 'android.arch.navigation:navigation-ui:1.0.0'
     implementation 'com.android.support:design:+'
@@ -45,6 +50,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(':BottomNavModule')
+
+    //implementation 'com.android.databinding:compiler:3.5.1'
 
 
 }

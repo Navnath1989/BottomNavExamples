@@ -25,7 +25,7 @@ public class NotificationsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         text_notifications = root.findViewById(R.id.text_notifications);
 
-        ((AppCompatActivity) getContext()).getSupportActionBar().setTitle("Notifications");
+        //((AppCompatActivity) getContext()).getSupportActionBar().setTitle("Notifications");
 
         NotificationsViewModel notificationsViewModel =
                 new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(NotificationsViewModel.class);
