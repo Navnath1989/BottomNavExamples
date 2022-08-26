@@ -36,7 +36,7 @@
                 android:textColor="#000000"
                 android:paddingLeft="8dp"
                 android:background="@drawable/eidittext_background"
-                android:textColorHint="#cccccc"
+                android:textColorHint="#ccc"
                 android:layout_marginTop="70dp"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"/>
