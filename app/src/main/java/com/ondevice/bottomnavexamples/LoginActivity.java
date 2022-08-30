@@ -9,6 +9,7 @@ import android.databinding.ViewDataBinding;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ondevice.bottomnavexamples.databinding.ActivityLoginBinding;
+import com.ondevice.bottomnavexamples.ui.home.HomeFragment;
 import com.ondevice.bottomnavmodule.LoginViewModel;
 import com.ondevice.bottomnavmodule.User;
+
+import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,61 +30,46 @@ public class LoginActivity extends AppCompatActivity {
     TextView tvTitle;
     EditText edEmail, edPassw;
 
-    //ActivityLoginBinding binding;
-    ViewDataBinding binding;
+    ActivityLoginBinding binding;
+    //ViewDataBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_login);
+        //setContentView(R.layout.activity_login);
+
+        binding = DataBindingUtil.setContentView(LoginActivity.this, R.layout.activity_login);
 
         loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
+        binding.setLoginViewModel(loginViewModel);
+        binding.setLifecycleOwner(this);
+        binding.executePendingBindings();
 
-        //binding = DataBindingUtil.setContentView(LoginActivity.this, R.layout.activity_login);
-        //binding.setLifecycleOwner(this);
 
-
-        btnLogin = findViewById(R.id.btnLogin);
+        /*btnLogin = findViewById(R.id.btnLogin);
         tvTitle = findViewById(R.id.tvTitle);
-
         edEmail = findViewById(R.id.edEmail);
-        edPassw = findViewById(R.id.edPassw);
+        edPassw = findViewById(R.id.edPassw);*/
 
         //loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
         //loginViewModel = new ViewModelProvider(this,
          //       new ViewModelProvider.NewInstanceFactory()).get(LoginViewModel.class);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        loginViewModel.getUser().observe(LoginActivity.this, new Observer<User>() {
             @Override
-            public void onClick(View v) {
-
-                //Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                //startActivity(i);
-
-             loginViewModel.getUser().observe(LoginActivity.this, new Observer<User>() {
-                    @Override
-                    public void onChanged(@Nullable User user) {
-
-                        String inemail = user.getmEmail();
-                        //inemail = edEmail.getText().toString();
-                        edEmail.requestFocus();
-
-                        String inpass = user.getmPassword();
-                        //inpass = edPassw.getText().toString();
-                        edPassw.requestFocus();
-
-                        if (inemail.length() > 0 || inpass.length() > 0)
-                            Toast.makeText(getApplicationContext(), "email : " + inemail + " password " +
-                                    inpass, Toast.LENGTH_SHORT).show();
-
-                        tvTitle.setText(inemail);
-
-                        //Toast.makeText(LoginActivity.this, "Email :"+user.getmEmail(), Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(LoginActivity.this, "Password :"+user.getmPassword(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+            public void onChanged(@Nullable User user) {
+                if (user.getEmail() != null || user.getPassword() != null){
+                    Toast.makeText(getApplicationContext(), "email : " + user.getEmail() + " password "
+                            + user.getPassword(), Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    i.putExtra("testN", user.getEmail());
+                    startActivity(i);
+                }else {
+                    Toast.makeText(LoginActivity.this, "Enter Valid Details!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 }

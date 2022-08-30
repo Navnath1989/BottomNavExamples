@@ -4,32 +4,29 @@ import android.util.Patterns;
 
 public class User {
 
-    private String mEmail;
-    private String mPassword;
+    private String email;
+    private String password;
 
-    public User(String email, String mPass){
-        mEmail = email;
-        mPassword = mPass;
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
-    public String getmEmail() {
-        if (mEmail == null) {
-            return "";
-        }
-        return mEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getmPassword() {
-        if (mPassword == null) {
-            return "";
-        }
-        return mPassword;
-    }
-    public boolean isEmailValid() {
-        return Patterns.EMAIL_ADDRESS.matcher(getmEmail()).matches();
+
+    public String getEmail() {
+        return email;
     }
 
-    public boolean isPasswordLengthGreaterThan5() {
-        return getmPassword().length() > 5;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public String getPassword() {
+        return password;
     }
 }

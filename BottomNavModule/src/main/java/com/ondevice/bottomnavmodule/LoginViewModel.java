@@ -3,47 +3,33 @@ package com.ondevice.bottomnavmodule;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
-import android.os.Handler;
 import android.view.View;
 
 public class LoginViewModel extends ViewModel {
 
-    private MutableLiveData<String> errorPassword = new MutableLiveData<>();
-    private MutableLiveData<String> errorEmail = new MutableLiveData<>();
-
-    private MutableLiveData<String> email = new MutableLiveData<>();
-    private MutableLiveData<String> password = new MutableLiveData<>();
-
-    private MutableLiveData<Integer> busy;
-    public MutableLiveData<Integer> getBusy() {
-
-        if (busy == null) {
-            busy = new MutableLiveData<>();
-            busy.setValue(8);
-        }
-
-        return busy;
-    }
+    public MutableLiveData<String> email = new MutableLiveData<>();
+    public MutableLiveData<String> password = new MutableLiveData<>();
 
     private MutableLiveData<User> userMutableLiveData;
 
+
     public LiveData<User> getUser() {
-        /*if (userMutableLiveData == null) {
+
+        if (userMutableLiveData == null) {
             userMutableLiveData = new MutableLiveData<>();
-            onLoginClicked();
-        }*/
+            //onClick();
+        }
 
-        userMutableLiveData = new MutableLiveData<>();
-        //onLoginClicked();
-
+        //User user = new User("navnath@gmail.com", "navanath");
         //User user = new User(email.getValue(), password.getValue());
         //userMutableLiveData.setValue(user);
 
         return userMutableLiveData;
     }
 
-    public void onClick(View view) {
+    public void onClickkk() {
 
+        //User user = new User("navnath@gmail.com", "navanath");
         User user = new User(email.getValue(), password.getValue());
         userMutableLiveData.setValue(user);
 

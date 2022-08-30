@@ -53,5 +53,7 @@ dependencies {
 
     //implementation 'com.android.databinding:compiler:3.5.1'
 
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+
 
 }

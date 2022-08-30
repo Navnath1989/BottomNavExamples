@@ -1,6 +1,7 @@
 package com.ondevice.bottomnavexamples;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -33,11 +34,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     DrawerLayout drawer;
 
+    public static final String abc = "testN";
+    public static String testStr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
         setContentView(R.layout.drow_layout);
+
+        Intent i = getIntent();
+        testStr = i.getStringExtra(abc);
 
         //binding = ActivityMainBinding.inflate(getLayoutInflater());
         //setContentView(binding.getRoot());

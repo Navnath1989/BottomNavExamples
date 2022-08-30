@@ -13,6 +13,8 @@ import android.support.v4.app.Fragment;
 import android.arch.lifecycle.ViewModelProvider;
 import android.widget.Toast;
 
+import com.ondevice.bottomnavexamples.LoginActivity;
+import com.ondevice.bottomnavexamples.MainActivity;
 import com.ondevice.bottomnavexamples.R;
 import com.ondevice.bottomnavexamples.databinding.FragmentHomeBinding;
 import com.ondevice.bottomnavmodule.HomeViewModel;
@@ -39,7 +41,6 @@ public class HomeFragment extends Fragment {
         //View root = binding.getRoot();
         //final TextView textView = binding.textHome;
         //homeViewModel.getText().observe(getViewLifecycleOwner(), text_home::setText);
-
         /*homeViewModel.getText().observe(getActivity(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -48,8 +49,9 @@ public class HomeFragment extends Fragment {
             }
         });*/
 
-        homeViewModel.starCount();
+        text_home.setText(MainActivity.testStr);
 
+        /*homeViewModel.starCount();
         homeViewModel.getstrt().observe(getActivity(), new Observer<Long>() {
             @Override
             public void onChanged(@Nullable Long abc) {
@@ -62,7 +64,7 @@ public class HomeFragment extends Fragment {
             public void onChanged(@Nullable Boolean aBoolean) {
                 text_home.setText("finish");
             }
-        });
+        });*/
 
         return root;
     }
