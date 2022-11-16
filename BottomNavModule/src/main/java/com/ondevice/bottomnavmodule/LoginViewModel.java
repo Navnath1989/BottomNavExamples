@@ -3,12 +3,13 @@ package com.ondevice.bottomnavmodule;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
-import android.view.View;
 
 public class LoginViewModel extends ViewModel {
 
     public MutableLiveData<String> email = new MutableLiveData<>();
     public MutableLiveData<String> password = new MutableLiveData<>();
+
+    public MutableLiveData<String> Downloadmsg = new MutableLiveData<>();
 
     private MutableLiveData<User> userMutableLiveData;
 
@@ -25,6 +26,21 @@ public class LoginViewModel extends ViewModel {
         //userMutableLiveData.setValue(user);
 
         return userMutableLiveData;
+    }
+
+    public LiveData<String> getShowDownl() {
+
+        if (Downloadmsg == null) {
+            Downloadmsg = new MutableLiveData<>();
+            //onClick();
+            Downloadmsg.setValue("Downloading...");
+        }
+
+        //User user = new User("navnath@gmail.com", "navanath");
+        //User user = new User(email.getValue(), password.getValue());
+        //userMutableLiveData.setValue(user);
+
+        return Downloadmsg;
     }
 
     public void onClickkk() {

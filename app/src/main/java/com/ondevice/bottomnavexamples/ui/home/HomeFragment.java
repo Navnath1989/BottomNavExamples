@@ -3,6 +3,7 @@ package com.ondevice.bottomnavexamples.ui.home;
 import android.arch.lifecycle.Observer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.ondevice.bottomnavexamples.LoginActivity;
 import com.ondevice.bottomnavexamples.MainActivity;
 import com.ondevice.bottomnavexamples.R;
 import com.ondevice.bottomnavexamples.databinding.FragmentHomeBinding;
+import com.ondevice.bottomnavexamples.ui.dashboard.DashboardFragment;
+import com.ondevice.bottomnavexamples.ui.notifications.NotificationsFragment;
 import com.ondevice.bottomnavmodule.HomeViewModel;
 
 public class HomeFragment extends Fragment {
@@ -75,4 +78,5 @@ public class HomeFragment extends Fragment {
         //binding = null;
 
     }*/
+
 }

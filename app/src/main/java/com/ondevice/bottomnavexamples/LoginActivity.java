@@ -1,14 +1,10 @@
 package com.ondevice.bottomnavexamples;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -22,8 +18,9 @@ import com.ondevice.bottomnavmodule.LoginViewModel;
 import com.ondevice.bottomnavmodule.User;
 
 import java.util.Objects;
+import java.util.Observer;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends TestingActivity {
 
     Button btnLogin;
     LoginViewModel loginViewModel;
@@ -46,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         binding.setLifecycleOwner(this);
         binding.executePendingBindings();
 
-
         /*btnLogin = findViewById(R.id.btnLogin);
         tvTitle = findViewById(R.id.tvTitle);
         edEmail = findViewById(R.id.edEmail);
@@ -56,10 +52,14 @@ public class LoginActivity extends AppCompatActivity {
         //loginViewModel = new ViewModelProvider(this,
          //       new ViewModelProvider.NewInstanceFactory()).get(LoginViewModel.class);
 
-        loginViewModel.getUser().observe(LoginActivity.this, new Observer<User>() {
+        /*loginViewModel.getUser().observe(LoginActivity.this, new Observer<User>() {
             @Override
             public void onChanged(@Nullable User user) {
                 if (user.getEmail() != null || user.getPassword() != null){
+                    *//*if (progressBarLayout != null) {
+                        setProgressVisible(View.VISIBLE);
+                        progressTextMessage.setText(user.getEmail());
+                    }*//*
                     Toast.makeText(getApplicationContext(), "email : " + user.getEmail() + " password "
                             + user.getPassword(), Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
@@ -69,7 +69,6 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Enter Valid Details!", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
-
+        });*/
     }
 }
