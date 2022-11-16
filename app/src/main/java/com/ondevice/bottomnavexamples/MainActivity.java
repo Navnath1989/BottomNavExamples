@@ -17,11 +17,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
 import com.ondevice.bottomnavexamples.ui.dashboard.DashboardFragment;
 import com.ondevice.bottomnavexamples.ui.home.HomeFragment;
 import com.ondevice.bottomnavexamples.ui.notifications.NotificationsFragment;

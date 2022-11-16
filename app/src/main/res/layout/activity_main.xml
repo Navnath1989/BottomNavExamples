@@ -32,6 +32,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />-->
 
+    <!--<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_containerr"
+            android:layout_width="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </FrameLayout>
+
+    </LinearLayout>-->
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
@@ -43,5 +67,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
